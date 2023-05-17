@@ -16,6 +16,6 @@ public class Calculator {
 
     // 위 코드를 Refactoring
     public static int calculate(int operate1, String operator, int operate2) { // 2개의 피연산자와 1개의 연산자필요
-       return ArithmeticOperator.calculate(operate1,operator,operate2);
+       return ArithmeticOperator.calculate(operate1,operator,operate2); //ArithmeticOperator에 다시 작업 위임(객체지향)
     }
 }

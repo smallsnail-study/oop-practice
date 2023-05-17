@@ -46,7 +46,7 @@ public class CalculatorTest {
     @MethodSource("formulaAndResult")
     void calculateTest(int operand1, String operator, int operand2, int result) {
 
-        int calculateResult = Calculator.calculate(operand1, operator, operand2);
+        int calculateResult = Calculator.calculate(operand1, operator, operand2);   //Calculator에 작업을 위임(객체지향)
 
         assertThat(calculateResult).isEqualTo(result);
     }
