@@ -1,4 +1,4 @@
-package org.example.calculate;
+package org.example.calculator.calculate;
 
 public class PositiveNumber {   //양수로만 계산할 수 있다.
     private final int value;

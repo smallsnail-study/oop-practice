@@ -1,4 +1,4 @@
-package org.example.calculate;
+package org.example.calculator.calculate;
 
 public class SubtractionOperator implements NewArithmeticOperator{
     @Override
