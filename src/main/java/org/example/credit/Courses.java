@@ -13,16 +13,14 @@ public class Courses {
     }
 
     public double multiplyCreditAndCourseGrade() {
-
-        double multipliedCreditAndCourseGrade = 0;
-        for (Course course : courses) {
-            //(과목당 학점수 × 학점에 해당하는 점수) 계산
-            multipliedCreditAndCourseGrade += course.multiplyCreditAndCourseGrade();
-        }
-        return multipliedCreditAndCourseGrade;
+        // 이수한 과목들의 학점수 x 성적 정보를 합산
+        return courses.stream()
+                .mapToDouble(Course::multiplyCreditAndCourseGrade)
+                .sum();
     }
 
     public int calculateTotalCompletedCredit() {
+        // 이수한 과목들의 학점수들을 합산
         return courses.stream()
                 .mapToInt(Course::getCredit)
                 .sum();
